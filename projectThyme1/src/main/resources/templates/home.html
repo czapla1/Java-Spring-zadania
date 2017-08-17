@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+</head>
+<body>
+	<h1>Add comments to my Blog!</h1>
+	<form th:action="@{posty}" method="post" th:object="${art}">
+		Title: <input type="text" th:field="*{title}" /><br /> Content:
+		<textarea th:field="*{content}"></textarea>
+		<br /> Signature: <input type="text" th:field="*{sign}" /><br /> <input
+			type="submit" value="add" />
+	</form>
+</body>
+
+</html>

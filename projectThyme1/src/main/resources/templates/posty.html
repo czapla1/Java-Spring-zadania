@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+</head>
+<body>
+
+	<div th:switch="${art.title.length()>0}">
+		<h1 th:case="false" th:text="Missing"> </h1>
+		<p th:case="true" th:text="${art.title.toUpperCase()}" />
+	</div>
+
+	<div th:switch="${art.content.length()>0}">
+		<p th:case="false" th:text="Missing" />
+		<p th:case="true" th:text="${art.content}" />
+	</div>
+
+	<div th:switch="${art.sign.length()>0}">
+		<p th:case="false" th:text="Anonim" />
+		<p th:case="true" th:text="${art.sign}" />
+	</div>
+
+
+</body>
+</html>
