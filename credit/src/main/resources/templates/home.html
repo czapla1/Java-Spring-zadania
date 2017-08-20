@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+</head>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<body>
+
+	<h1>Fill data:</h1>
+
+	<form th:action="@{result}" method="post">
+		Amount: <input type="text" th:field="${credit.kwota}" /><br /> Period
+		(month): <input type="text" th:field="${credit.okres}" /><br /> <input
+			type="submit" value="verify" />
+
+
+	</form>
+
+
+</body>
+
+</html>
