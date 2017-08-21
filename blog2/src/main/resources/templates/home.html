@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<title>MyBlog</title>
+</head>
+
+
+<body>
+	<h1>Add post in MyBlog</h1>
+
+	<form th:action="@{/save}" method="post">
+		Title: <input type="text" th:field="${blog.title}" /><br /> 
+		Content: <textarea th:field="${blog.content}"></textarea><br /> 
+		Category: <input type="text" th:field="${blog.category}" /><br />
+		Signature: <input type="text" th:field="${blog.signature}" /><br /> 
+		<input 	type="submit" value="save" /><br /> <a th:href="@{/results}">show all</a>
+	</form>
+
+
+</body>
+
+</html>

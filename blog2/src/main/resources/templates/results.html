@@ -1,0 +1,42 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script src="https://use.fontawesome.com/5b29753fd3.js"></script>
+
+
+</head>
+<body>
+	<div th:if="not ${all.isEmpty()}">
+		<table>
+			<tr>
+				<th>Title</th>
+				<th>Content</th>
+				<th>Category</th>
+				<th>Signature</th>
+
+			</tr>
+
+			<tr th:each="single:${all}">
+
+				<td th:text="${single.title}"></td>
+				<td th:text="${single.content}"></td>
+				<td th:text="${single.category}"></td>
+				<td th:text="${single.signature}"></td>
+
+			</tr>
+
+		</table>
+
+
+	</div>
+
+	<div th:if="${all.isEmpty()}">
+		<h2>Any post to show!</h2>
+	</div>
+
+
+</body>
+
+</html>
